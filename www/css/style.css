@@ -23,8 +23,16 @@ input {
 
 #btnR {
   margin-top: 10px;
-  height: 30px;
+  margin-bottom: 10px;
+  font-size: 16pt;
+  height: 4ex;
+  width: 4em;
   border-radius: 10px;
   color: white;
   background-color: blue;
+}
+
+#message {
+  border-style: solid;
+  border-color: grey;
 }
