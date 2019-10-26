@@ -1,2 +1,0 @@
-var appKey    = "";
-var clientKey = "";
