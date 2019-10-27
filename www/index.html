@@ -16,12 +16,27 @@
     // コールバックの登録など
     $(function(){
       $("#message").html("initialized");
-      $("#btnR").click(function(e){
-        btnRClick(e);
+      $("#btnA").click(function(e){
+        btnAClick(e);
+      })
+      $("#btnB").click(function(e){
+        btnBClick(e);
       })
     });
 
-    function btnRClick(e) {
+    function btnAClick(e) {
+      // 登録するレコードを用意
+      var testClass = new TestClass();
+      var key = $("#key").val();
+      var value = $("#value").val();
+      // レコードのフィールドと値を設定
+      testClass.set(key, value);
+      // レコードをデータベースに登録
+      testClass.save();
+      $("#message").html("btnA clicked !");
+    }
+
+    function btnBClick(e) {
       // 登録するレコードを用意
       var testClass = new TestClass();
       var key = $("#key").val();
@@ -51,7 +66,8 @@
     <input id="value" type="text" value="Hello, mBaaS!">
   </div>
   <div id="button">
-    <button id="btnR">Regist</button>
+    <button id="btnA" class="btn">Register1</button>
+    <button id="btnB" class="btn">Register2</button>
   </div>
   <div id="message"></div>
 </body>
