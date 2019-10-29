@@ -39,8 +39,6 @@
     function btnBClick(e) {
       // 登録するレコードを用意
       var testClass = new TestClass();
-      var key = $("#key").val();
-      var value = $("#value").val();
       // レコードのフィールドと値を設定
       testClass.set(key, value);
       // レコードをデータベースに登録
@@ -52,7 +50,7 @@
         $("#message").html("Failed to create new object, with error code: " + JSON.stringify(err));
       })
     }
-
+<script src="keys.js"></script>
     </script>
 </head>
 <body>
